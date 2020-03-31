@@ -1,0 +1,18 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: nativeconfigserver
+  profiles:
+    active: native                  #配置文件的获取方式
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/shared
+
+eureka:
+  client:
+    service-url:
+      default-Zone: http://localhost:8761/eureka/
